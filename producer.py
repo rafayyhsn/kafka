@@ -20,7 +20,7 @@ def produce_data():
     message_count = 0
     with open(json_file) as f:
         for line in f:
-            if message_count >= 10:
+            if message_count >= 200000:
                 break
             try:
                 data = json.loads(line.strip())
